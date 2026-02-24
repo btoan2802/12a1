@@ -1,0 +1,108 @@
+
+
+/* Style chung trang */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif; /* font hiện đại */
+    background: linear-gradient(135deg, #e6f4ff, #ffffff); /* nền chuyển màu */
+    color: #333; /* màu chữ */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #00b894); /* nền xanh chuyển */
+    color: white; /* chữ trắng */
+    text-align: center; /* căn giữa */
+    padding: 35px 15px; /* khoảng cách trong */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* đổ bóng */
+}
+
+/* Tiêu đề header */
+header h1 {
+    font-size: 28px; /* chữ lớn */
+    margin-bottom: 8px; /* cách dòng dưới */
+}
+
+/* Thanh menu */
+nav {
+    background: white; /* nền trắng */
+    text-align: center; /* căn giữa link */
+    padding: 12px; /* khoảng cách trong */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* bóng nhẹ */
+    position: sticky; /* cố định khi cuộn */
+    top: 0; /* dính trên */
+}
+
+/* Link menu */
+nav a {
+    text-decoration: none; /* bỏ gạch chân */
+    color: #007bff; /* màu xanh */
+    font-weight: 600; /* chữ đậm */
+    padding: 8px 18px; /* khoảng cách */
+    border-radius: 8px; /* bo góc */
+    transition: 0.3s; /* hiệu ứng mượt */
+}
+
+/* Hover menu */
+nav a:hover {
+    background: #007bff; /* nền xanh */
+    color: white; /* chữ trắng */
+}
+
+/* Khung chứa gallery */
+.container {
+    max-width: 1100px; /* chiều rộng tối đa */
+    margin: 40px auto; /* căn giữa */
+    padding: 0 20px; /* khoảng cách 2 bên */
+    display: grid; /* layout dạng lưới */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive */
+    gap: 25px; /* khoảng cách giữa card */
+}
+
+/* Card ảnh */
+.card {
+    background: white; /* nền trắng */
+    border-radius: 16px; /* bo góc */
+    padding: 15px; /* khoảng cách trong */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* bóng đổ */
+    transition: 0.35s; /* hiệu ứng */
+}
+
+/* Hover card */
+.card:hover {
+    transform: translateY(-8px); /* nổi lên */
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15); /* bóng mạnh */
+}
+
+/* Ảnh trong card */
+.card img {
+    width: 100%; /* ảnh full card */
+    border-radius: 12px; /* bo góc ảnh */
+    transition: 0.4s; /* hiệu ứng zoom */
+}
+
+/* Hover ảnh */
+.card:hover img {
+    transform: scale(1.05); /* phóng to nhẹ */
+}
+
+/* Nội dung mô tả */
+.card p {
+    margin-top: 10px; /* cách ảnh */
+    font-size: 15px; /* kích thước chữ */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* căn giữa */
+    background: #222; /* nền tối */
+    color: white; /* chữ trắng */
+    padding: 18px; /* khoảng cách trong */
+    margin-top: 50px; /* cách nội dung */
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px; /* thu nhỏ tiêu đề */
+    }
+}
