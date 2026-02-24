@@ -1,0 +1,17 @@
+.tieude{
+    color:blue;
+    font-size: 30px;
+}
+.noidung{
+    font-size: 20px;
+}
+body{
+    background-color:lightyellow;
+}
+.content{
+   display:flex;
+}
+.tacgia{
+    margin-left: 58px;
+    font-size: 18px;
+}

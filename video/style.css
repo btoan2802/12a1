@@ -1,0 +1,30 @@
+body{
+            margin: 0;
+            background:white;
+            text-align: center;
+        }
+
+        h1{
+            background: #0d47a1;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+
+        video{
+            width: 70%;
+            max-width: 1000px;
+            border: 5px solid #0d47a1;
+            border-radius: 10px;
+            margin: 40px auto;
+        }
+
+        
+
+        footer{
+            margin-top: 40px;
+            padding: 10px;
+            background: #0d47a1;
+            color: white;
+        }
