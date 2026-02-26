@@ -2,6 +2,7 @@ body{
             margin: 0;
             background:white;
             text-align: center;
+            overflow: hidden;
         }
 
         h1{
@@ -28,3 +29,4 @@ body{
             background: #0d47a1;
             color: white;
         }
+       
