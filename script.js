@@ -5,14 +5,21 @@ function login()
     const fullname = document.getElementById("loginName").value.trim();
     const user = document.getElementById("loginUser").value.trim();
     const pass = document.getElementById("loginPass").value.trim();
+    const errorBox = document.getElementById("loginError");
 
-    if(!fullname) return alert("Nhập họ tên");
+    errorBox.innerText = ""; // reset lỗi
+
+    if(!fullname)
+    {
+        errorBox.innerText = "Vui lòng nhập họ tên";
+        return;
+    }
 
     if(user === "admin" && pass === "1")
     {
         currentUser = {
             name: fullname,
-            avatar: "teacher/thanh.jpg" 
+            avatar: "teacher/thanh.jpg"
         };
 
         document.getElementById("authArea").innerHTML = `
@@ -23,9 +30,14 @@ function login()
             </div>
         `;
 
-        bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+        bootstrap.Modal.getInstance(
+            document.getElementById('loginModal')
+        ).hide();
     }
-    else alert("Sai tài khoản");
+    else
+    {
+        errorBox.innerText = "Sai tên đăng nhập hoặc mật khẩu";
+    }
 }
 function fakeRegister()
 {
@@ -64,7 +76,13 @@ const comments = [
     avatar: "https://www.thanglongwaterpuppet.org/wp-content/uploads/2025/10/anh-che-messi-va-chu-tich-fifa-mang-den-goc-nhin-hai-huoc-day-thu-vi.jpg",
     verified: true,
     likes: 8,
-    replies: []
+    replies: [
+        {
+            name: "Trịnh Trần Phương Tuấn",
+            text: "Đóng MV với tui nha anh Messi",
+            avatar: "teacher/jack.jpg"
+        }
+    ]
 },
 {
     id: 3,
