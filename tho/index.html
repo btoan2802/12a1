@@ -2,16 +2,37 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title> Báo Tường 26/3 - Lớp 12A1</title>
+<title>Báo Tường 26/3 - Lớp 12A1</title>
 
 <link rel="icon" href="logo.png">
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- CSS của bạn -->
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style2.css">
+
+<style>
+body {
+    background: #f4f6f9;
+}
+
+.section-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.custom-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+}
+</style>
 
 </head>
 
@@ -25,21 +46,19 @@
     </a>
 </div>
 
-<!-- MENU + LOGIN -->
+<!-- MENU -->
 <nav class="menu d-flex justify-content-between align-items-center">
-
     <div>
-        <a href="#tin">Tin nổi bật</a>
-        <a href="#vanhoc">Văn học</a>
-        <a href="#hinhanh">Hình ảnh</a>
-        <a href="#video">Video</a>
-        <a href="#tho">Thơ</a>
-        <a href="#gioithieu">Giới thiệu</a>
+        <a href="../index.html#tin">Tin nổi bật</a>
+        <a href="../index.html#vanhoc">Văn học</a>
+        <a href="../index.html#hinhanh">Hình ảnh</a>
+        <a href="../index.html#video">Video</a>
+        <a href="../index.html#tho">Thơ</a>
+        <a href="../index.html#gioithieu">Giới thiệu</a>
         <a href="#commentList">Bình luận</a>
         <a href="#lienhe">Liên hệ</a>
     </div>
 
-    <!-- LOGIN REGISTER -->
     <div id="authArea">
         <button class="btn btn-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
             🔐 Đăng nhập
@@ -48,63 +67,19 @@
             📝 Đăng ký
         </button>
     </div>
-
 </nav>
 
-<!-- MAIN -->
- <div class="container">
+<!-- MAIN CONTENT -->
+<div class="container my-4">
 
-        <div class="card">
-            <h2>Giới thiệu chung</h2>
-            <p>Ngày 26/3 là Ngày thành lập Đoàn Thanh niên Cộng sản Hồ Chí Minh (1931), là dịp kỷ niệm truyền thống vẻ vang của thanh niên Việt Nam.</p>
-            <p>Ngày lễ khẳng định vai trò nòng cốt của tổ chức Đoàn trong xây dựng và bảo vệ Tổ quốc, đồng thời khơi dậy tinh thần xung kích, sáng tạo và đoàn kết của thế hệ trẻ.</p>
-        </div>
+    <!-- IFRAME CONTENT -->
+    <iframe src="tho/tho.html"
+        class="custom-iframe">
+    </iframe>
 
-        <div class="card">
-        <h2>Nguồn gốc</h2>
-        <p>Tại Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 2 (20–26/3/1931), Đảng đã quyết định thành lập tổ chức thanh niên — tiền thân là Đoàn Thanh niên Cộng sản Đông Dương.</p>
-        </div>
-
-        <div class="card">
-        <h2>Ý nghĩa</h2>
-        <ul>
-        <li>Kỷ niệm và tôn vinh sự cống hiến của thế hệ trẻ.</li>
-        <li>Giáo dục tinh thần yêu nước, xung kích, tình nguyện.</li>
-        <li>Gắn kết thanh niên thông qua hoạt động cộng đồng.</li>
-        </ul>
-        </div>
-
-        <div class="card">
-        <h2>Hoạt động chào mừng</h2>
-        <ul>
-        <li>Kết nạp đoàn viên mới</li>
-        <li>Tuyên dương cán bộ Đoàn xuất sắc</li>
-        <li>Tháng Thanh niên tình nguyện</li>
-        <li>Hội trại, văn nghệ, thể thao</li>
-        </ul>
-        </div>
-        <div class="card">
-        <h2>Truyền thống thanh niên Việt Nam</h2>
-        <p>Trải qua nhiều giai đoạn lịch sử, thanh niên Việt Nam luôn là lực lượng xung kích trong học tập, lao động, chiến đấu và bảo vệ Tổ quốc.</p>
-        <p>Ngày 26/3 là dịp nhắc nhở thế hệ trẻ phát huy tinh thần trách nhiệm, sống có lý tưởng, góp phần xây dựng đất nước ngày càng giàu mạnh.</p>
-        </div>
-
-        <div class="card">
-        <h2>Vai trò của Đoàn trong thời đại mới</h2>
-        <ul>
-        <li>Định hướng lý tưởng sống cho thanh niên.</li>
-        <li>Tổ chức hoạt động tình nguyện vì cộng đồng.</li>
-        <li>Hỗ trợ học tập, khởi nghiệp và sáng tạo.</li>
-        <li>Bồi dưỡng thế hệ trẻ trở thành công dân có ích.</li>
-        </ul>
-        </div>
-
-</div>
-
-
-</div>
+    <!-- COMMENT SECTION -->
     <section class="section-box">
-        <h2>Bình luận</h2>
+        <h2 class="mb-3">Bình luận</h2>
 
         <div id="commentList"></div>
 
@@ -117,6 +92,8 @@
     </section>
 
 </div>
+
+<!-- FOOTER -->
 <footer class="footer" id="lienhe">
     <div class="footer-container">
 
@@ -161,7 +138,6 @@
 <button class="btn btn-danger" onclick="login()">Đăng nhập</button>
 </div>
 
-
 </div>
 </div>
 </div>
@@ -191,6 +167,7 @@
 </div>
 </div>
 </div>
+
 <div class="toast position-fixed bottom-0 end-0 m-3" id="registerToast">
   <div class="toast-body bg-success text-white">
     Đăng ký thành công ✅
@@ -198,7 +175,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="script.js"></script>
 
 </body>

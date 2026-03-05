@@ -1,120 +1,200 @@
-/* ===== STYLE CHUNG CHO TOÀN TRANG ===== */
+/* ================= CSS GỐC ================= */
 
-body {
-    font-family: "Segoe UI", Tahoma, sans-serif; /* font chữ hiện đại dễ đọc */
-    background: linear-gradient(135deg, #dff3ff, #b8e0ff); /* nền xanh nhạt chuyển màu */
-    color: #1f2d3d; /* màu chữ chính */
-    margin: 0; /* bỏ khoảng cách ngoài mặc định của body */
-    padding: 20px; /* tạo khoảng cách viền trang */
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+/* ===== HEADER ===== */
+.topbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgb(69, 245, 148);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ===== IFRAME SỬA LẠI ===== */
+iframe
+{
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+/* KHÔNG DÙNG SCROLL - TĂNG CHIỀU CAO LỚN */
+.custom-iframe
+{
+    width: 100%;
+    min-height: 1500px;   /* chỉnh cao hơn nội dung thật */
+    border: none;
+    display: block;
 }
 
 
-/* ===== HEADER ĐẦU TRANG ===== */
-
-.site-header {
-    text-align: center; /* căn giữa nội dung */
-    padding: 30px 15px; /* khoảng cách trong */
-    background: linear-gradient(135deg, #007bff, #00b894); /* nền xanh chuyển màu */
-    color: white; /* chữ trắng */
-    border-radius: 14px; /* bo góc khối */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* đổ bóng */
-    margin-bottom: 15px; /* cách phần dưới */
+/* ===== LOGO + TITLE ===== */
+.brand
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #f15a24;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.site-header h1 {
-    margin: 0; /* bỏ khoảng cách mặc định */
-    font-size: 30px; /* kích thước tiêu đề */
-    letter-spacing: 1px; /* giãn chữ nhẹ */
-}
-
-
-/* ===== THANH MENU ===== */
-
-.site-nav {
-    text-align: center; /* căn giữa menu */
-    margin-bottom: 25px; /* cách nội dung dưới */
-}
-
-.site-nav a {
-    text-decoration: none; /* bỏ gạch chân */
-    color: #007bff; /* màu chữ */
-    font-weight: bold; /* chữ đậm */
-    padding: 8px 16px; /* tạo vùng click */
-    margin: 0 6px; /* khoảng cách giữa link */
-    border-radius: 8px; /* bo góc */
-    background: white; /* nền trắng */
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* bóng nhẹ */
-    transition: 0.3s; /* hiệu ứng mượt */
-}
-
-.site-nav a:hover {
-    background: #007bff; /* nền đổi màu khi hover */
-    color: white; /* chữ trắng khi hover */
+.brand img
+{
+    height: 64px;
+    width: auto;
+    object-fit: contain;
 }
 
 
-/* ===== ĐOẠN GIỚI THIỆU ===== */
+/* ===== MENU ===== */
+.menu
+{
+    background: linear-gradient(to right, #b30000, #e60000);
+    padding: 12px 40px;
+}
 
-.intro {
-    max-width: 900px; /* giới hạn chiều rộng */
-    margin: 0 auto 30px auto; /* căn giữa + cách dưới */
-    background: rgba(255,255,255,0.9); /* nền trắng mờ */
-    padding: 20px 25px; /* khoảng cách trong */
-    border-left: 6px solid #007bff; /* viền xanh bên trái */
-    border-radius: 10px; /* bo góc */
-    line-height: 1.7; /* giãn dòng */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08); /* bóng nhẹ */
+.menu a
+{
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
 }
 
 
-/* ===== KHUNG CHỨA CÁC BÀI VIẾT ===== */
-
-.content {
-    max-width: 950px; /* chiều rộng tối đa */
-    margin: auto; /* căn giữa */
+/* ===== MAIN ===== */
+.container
+{
+    width: 1100px;
+    margin: 30px auto;
 }
 
 
-/* ===== THẺ BÀI VIẾT ===== */
-
-.content .card {
-    background: white; /* nền trắng */
-    border-radius: 14px; /* bo góc */
-    padding: 25px 28px; /* khoảng cách trong */
-    margin-bottom: 28px; /* cách card khác */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* bóng mềm */
-    border-top: 5px solid #00b894; /* thanh màu trên */
+/* ===== SECTION BOX ===== */
+.section-box
+{
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 
-/* ===== TIÊU ĐỀ TRONG CARD ===== */
+/* ===== TIN CHÍNH ===== */
+.featured-left
+{
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
 
-.content .card h2 {
-    color: #0056b3; /* màu xanh đậm */
-    margin-top: 0; /* bỏ khoảng cách trên */
-    margin-bottom: 12px; /* cách nội dung dưới */
-    font-size: 22px; /* kích thước chữ */
+.featured-left img
+{
+    width: 100%;
+    border-radius: 6px;
 }
 
 
-/* ===== NỘI DUNG ĐOẠN VĂN ===== */
+/* ===== TIN NHỎ ===== */
+.news-item
+{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
 
-.content .card p {
-    text-align: justify; /* canh đều hai bên */
-    line-height: 1.7; /* giãn dòng */
-    margin-bottom: 14px; /* cách đoạn dưới */
-    font-size: 16px; /* kích thước chữ */
+.news-item img
+{
+    border-radius: 4px;
 }
 
 
-/* ===== FOOTER CUỐI TRANG ===== */
+/* ===== POST ===== */
+.post
+{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 
-.site-footer {
-    text-align: center; /* căn giữa chữ */
-    background: #1f2d3d; /* nền tối */
-    color: white; /* chữ trắng */
-    padding: 16px; /* khoảng cách trong */
-    border-radius: 10px; /* bo góc */
-    margin-top: 40px; /* cách nội dung trên */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15); /* bóng */
+.post img
+{
+    border-radius: 6px;
+}
+
+
+/* ===== FOOTER ===== */
+.footer
+{
+    text-align: center;
+    padding: 20px;
+    background: rgb(27, 6, 6);
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    color:#eef2f7
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+
+/* ===== LAYOUT MỞ RỘNG ===== */
+.main-grid
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.article
+{
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.article h3
+{
+    margin: 0 0 5px 0;
+}
+
+
+/* ===== GALLERY ===== */
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.grid img
+{
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+/* ===== VERIFIED BADGE ===== */
+.verified-badge
+{
+    width:22px;
+    height:22px;
+    margin-left:1px;
+    transform: translateY(-2px);
+    object-fit:contain;
 }

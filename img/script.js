@@ -70,7 +70,7 @@ const comments = [
 },
 {
     id: 2,
-    name: "Leo Messi (10 Tạ)",
+    name: "Leo Messi",
     text: "Trang web nhìn chuyên nghiệp thật ⚽",
     time: "26/03/2026 09:30",
     avatar: "https://www.thanglongwaterpuppet.org/wp-content/uploads/2025/10/anh-che-messi-va-chu-tich-fifa-mang-den-goc-nhin-hai-huoc-day-thu-vi.jpg",
@@ -81,11 +81,6 @@ const comments = [
             name: "Trịnh Trần Phương Tuấn",
             text: "Đóng MV với tui nha anh Messi",
             avatar: "teacher/jack.jpg"
-        },
-        {
-            name: "Sơn Tùng M-TP",
-            text: "10 giờ kém 7",
-            avatar: "https://kenh14cdn.com/203336854389633024/2024/5/28/photo-1-17168606131071257137350.jpg"
         }
     ]
 },
@@ -112,7 +107,7 @@ const comments = [
 {
     id: 5,
     name: "Xuân Ngô",
-    text: "Bạn Lê Giang cứ tiếp tục đi trễ như vậy, kì II cô hạ hạnh kiểm xuống khá",
+    text: "Cứ tiếp tục đi trễ như vậy, kì II cô hạ hạnh kiểm xuống khá",
     time: "26/03/2026 06:36",
     avatar: "teacher/xuan.jpg",
     verified: false,
@@ -233,3 +228,13 @@ function addComment()
 
 // ===== INIT =====
 renderComments();
+
+// ===== AUTO RESIZE IFRAME =====
+window.addEventListener("load", function () {
+    const iframe = document.getElementById("thoFrame");
+
+    iframe.addEventListener("load", function () {
+        iframe.style.height =
+            iframe.contentWindow.document.documentElement.scrollHeight + "px";
+    });
+});

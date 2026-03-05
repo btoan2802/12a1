@@ -2,58 +2,180 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Hình ảnh ngày 26/3</title>
-<link rel="stylesheet" href="styles.css">
+<title>Báo Tường 26/3 - Lớp 12A1</title>
+
+<link rel="icon" href="logo.png">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
+
+<style>
+body {
+    background: #f4f6f9;
+}
+
+.section-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.custom-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-<h1>Hình ảnh kỷ niệm Ngày 26/3</h1>
-<p>Ngày thành lập Đoàn Thanh niên Cộng sản Hồ Chí Minh</p>
-</header>
+<!-- HEADER -->
+<div class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="logo.png">
+        <span>BÁO TƯỜNG ĐIỆN TỬ 12A1</span>
+    </a>
+</div>
 
-<nav>
-<a href="../index.html">Trang chủ</a>
+<!-- MENU -->
+<nav class="menu d-flex justify-content-between align-items-center">
+    <div>
+        <a href="../index.html#tin">Tin nổi bật</a>
+        <a href="../index.html#vanhoc">Văn học</a>
+        <a href="../index.html#hinhanh">Hình ảnh</a>
+        <a href="../index.html#video">Video</a>
+        <a href="../index.html#tho">Thơ</a>
+        <a href="../index.html#gioithieu">Giới thiệu</a>
+        <a href="#commentList">Bình luận</a>
+        <a href="#lienhe">Liên hệ</a>
+    </div>
+
+    <div id="authArea">
+        <button class="btn btn-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            🔐 Đăng nhập
+        </button>
+        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#registerModal">
+            📝 Đăng ký
+        </button>
+    </div>
 </nav>
 
-<div class="container">
+<!-- MAIN CONTENT -->
+<div class="container my-4">
 
-<div class="card">
-<img src="0.jpg">
-<p>Ngày 26-3-1931: Đoàn TNCS Hồ Chí Minh được thành lập.</p>
-</div>
+    <!-- IFRAME CONTENT -->
+    <iframe src="img/img.html"
+        class="custom-iframe">
+    </iframe>
 
-<div class="card">
-<img src="1.jpg">
-<p>Tinh thần đoàn kết của 54 dân tộc Việt Nam.</p>
-</div>
+    <!-- COMMENT SECTION -->
+    <section class="section-box">
+        <h2 class="mb-3">Bình luận</h2>
 
-<div class="card">
-<img src="2.jpg">
-<p>Tranh thể hiện tinh thần yêu nước của đoàn viên thanh niên.</p>
-</div>
+        <div id="commentList"></div>
 
-<div class="card">
-<img src="3.jpg">
-<p>Biểu tượng ngày thành lập Đoàn 26/3.</p>
-</div>
-
-<div class="card">
-<img src="4.jpg">
-<p>Đoàn viên xếp hình huy hiệu Đoàn.</p>
-</div>
-
-<div class="card">
-<img src="5.jpg">
-<p>Thiệp kỷ niệm ngày thành lập Đoàn.</p>
-</div>
+        <div class="mt-3">
+            <textarea id="commentInput" class="form-control mb-2" placeholder="Nhập bình luận..."></textarea>
+            <button onclick="addComment()" class="btn btn-danger">
+                Gửi bình luận
+            </button>
+        </div>
+    </section>
 
 </div>
 
-<footer>
-<p>Thiết kế bởi Hoài Linh</p>
+<!-- FOOTER -->
+<footer class="footer" id="lienhe">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h2>LIÊN HỆ</h2>
+            <p>Trường THPT Nguyễn Văn Cừ — Lớp 12A1</p>
+            <p>Email: ss1sien@gmail.com</p>
+            <p>Điện thoại: 0352 924 355</p>
+        </div>
+
+        <div class="footer-col">
+            <h2>GIỚI THIỆU</h2>
+            <p>Chào mừng ngày 26/3 — Ngày thành lập Đoàn TNCS Hồ Chí Minh.</p>
+            <p>Trang web do lớp 12A1 thực hiện.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026. Thiết kế bởi nhóm 5. Mọi sao chép vui lòng ghi nguồn.
+    </div>
 </footer>
+
+<!-- MODAL LOGIN -->
+<div class="modal fade" id="loginModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Đăng nhập</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<input id="loginName" class="form-control mb-2" placeholder="Họ và tên">
+<input id="loginUser" class="form-control mb-2" placeholder="Tên đăng nhập">
+<input type="password" id="loginPass" class="form-control" placeholder="Mật khẩu">
+<div id="loginError" class="text-danger mt-1" style="font-size:14px;"></div>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+<button class="btn btn-danger" onclick="login()">Đăng nhập</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- MODAL REGISTER -->
+<div class="modal fade" id="registerModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Đăng ký</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<input class="form-control mb-2" placeholder="Tên đăng nhập">
+<input type="password" class="form-control" placeholder="Mật khẩu">
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+<button class="btn btn-warning" onclick="fakeRegister()">
+    Tạo tài khoản
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="toast position-fixed bottom-0 end-0 m-3" id="registerToast">
+  <div class="toast-body bg-success text-white">
+    Đăng ký thành công ✅
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

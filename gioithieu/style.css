@@ -1,115 +1,178 @@
+/* ================= CSS GỐC CỦA BẠN ================= */
 
-
-/* Style chung cho body */
-body {
-    font-family: "Segoe UI", Tahoma, sans-serif; /* font chữ hiện đại dễ đọc */
-    background: linear-gradient(135deg, #e6f4ff, #ffffff); /* nền chuyển màu nhẹ */
-    color: #333; /* màu chữ chính */
-    line-height: 1.6; /* khoảng cách dòng cho dễ đọc */
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
 }
 
-/* Header đầu trang */
-header {
-    background: linear-gradient(135deg, #007bff, #00b894); /* nền xanh chuyển màu */
-    color: white; /* chữ màu trắng */
-    text-align: center; /* căn giữa nội dung */
-    padding: 35px 15px; /* khoảng cách trong header */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* đổ bóng */
+/* ===== HEADER ===== */
+.topbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgb(69, 245, 148);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+iframe {
+    width: 100%;
+    height: 500px; /* chỉnh theo ý m */
+    border: none;
+    display: block;
 }
 
-/* Tiêu đề trong header */
-header h1 {
-    font-size: 28px; /* kích thước chữ lớn */
-    letter-spacing: 1px; /* giãn chữ nhẹ */
+/* LOGO + TITLE */
+.brand
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #f15a24;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* Thanh điều hướng */
-nav {
-    background: white; /* nền trắng */
-    text-align: center; /* căn giữa link */
-    padding: 12px; /* khoảng cách trong nav */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* bóng nhẹ */
-    position: sticky; /* cố định khi cuộn */
-    top: 0; /* dính trên cùng */
-    z-index: 1000; /* nằm trên các phần khác */
+.brand img
+{
+    height: 64px;
+    width: auto;
+    object-fit: contain;
 }
 
-/* Link trong nav */
-nav a {
-    text-decoration: none; /* bỏ gạch chân */
-    color: #007bff; /* màu chữ xanh */
-    font-weight: 600; /* chữ đậm */
-    padding: 8px 18px; /* khoảng cách trong nút */
-    border-radius: 8px; /* bo góc */
-    transition: 0.3s; /* hiệu ứng mượt */
+/* ===== MENU ===== */
+.menu
+{
+    background: linear-gradient(to right, #b30000, #e60000);
+    padding: 12px 40px;
 }
 
-/* Hiệu ứng hover link */
-nav a:hover {
-    background: #007bff; /* nền xanh khi hover */
-    color: white; /* chữ trắng khi hover */
+.menu a
+{
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
 }
 
-/* Khung chứa toàn bộ card */
-.container {
-    max-width: 1100px; /* chiều rộng tối đa */
-    margin: 40px auto; /* căn giữa trang */
-    padding: 0 20px; /* khoảng cách 2 bên */
-    display: grid; /* dùng layout grid */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* tự chia cột responsive */
-    gap: 25px; /* khoảng cách giữa các card */
+/* ===== MAIN ===== */
+.container
+{
+    width: 1100px;
+    margin: 30px auto;
 }
 
-/* Card nội dung */
-.card {
-    background: white; /* nền trắng */
-    border-radius: 16px; /* bo góc mềm */
-    padding: 25px; /* khoảng cách trong */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* bóng đổ */
-    transition: 0.35s; /* hiệu ứng chuyển động */
-    position: relative; /* phục vụ pseudo-element */
-    overflow: hidden; /* ẩn phần dư */
+/* TIN CHÍNH */
+.featured-left
+{
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-/* Thanh màu trên đầu card */
-.card::before {
-    content: ""; /* tạo phần tử giả */
-    position: absolute; /* định vị tuyệt đối */
-    width: 100%; /* rộng hết card */
-    height: 4px; /* chiều cao thanh màu */
-    top: 0; /* nằm trên cùng */
-    left: 0; /* sát trái */
-    background: linear-gradient(90deg, #007bff, #00b894); /* màu chuyển */
+.featured-left img
+{
+    width: 100%;
+    border-radius: 6px;
 }
 
-/* Hiệu ứng khi rê chuột vào card */
-.card:hover {
-    transform: translateY(-8px); /* nổi lên */
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15); /* bóng đậm hơn */
+/* TIN NHỎ */
+.news-item
+{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
-/* Tiêu đề card */
-.card h2 {
-    color: #007bff; /* màu tiêu đề */
-    margin-bottom: 12px; /* cách nội dung dưới */
+.news-item img
+{
+    border-radius: 4px;
 }
 
-/* Danh sách trong card */
-.card ul {
-    padding-left: 20px; /* thụt vào cho đẹp */
+/* DANH SÁCH */
+.section-box
+{
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-/* Từng dòng trong danh sách */
-.card li {
-    margin: 8px 0; /* khoảng cách giữa các dòng */
+/* POST */
+.post
+{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-/* Footer cuối trang */
-footer {
-    text-align: center; /* căn giữa chữ */
-    background: #222; /* nền tối */
-    color: white; /* chữ trắng */
-    padding: 18px; /* khoảng cách trong */
-    margin-top: 50px; /* cách nội dung trên */
-    font-size: 14px; /* chữ nhỏ */
+.post img
+{
+    border-radius: 6px;
+}
+
+/* FOOTER */
+.footer
+{
+    text-align: center;
+    padding: 20px;
+    background: rgb(27, 6, 6);
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    color:#eef2f7
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+/* ================= PHẦN MỞ RỘNG (THÊM VÀO) ================= */
+
+/* layout báo điện tử */
+.main-grid
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* danh sách bài viết dài */
+.article
+{
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.article h3
+{
+    margin: 0 0 5px 0;
+}
+
+/* gallery */
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.grid img
+{
+    width: 100%;
+    border-radius: 6px;
+}
+.verified-badge{
+    width:22px;            /* to hơn */
+    height:22px;
+    margin-left:1px;       /* sát tên hơn */
+    transform: translateY(-2px); /* kéo lên ngang chữ */
+    object-fit:contain;
 }

@@ -1,0 +1,120 @@
+/* ===== STYLE CHUNG CHO TOÀN TRANG ===== */
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif; /* font chữ hiện đại dễ đọc */
+    background: linear-gradient(135deg, #dff3ff, #b8e0ff); /* nền xanh nhạt chuyển màu */
+    color: #1f2d3d; /* màu chữ chính */
+    margin: 0; /* bỏ khoảng cách ngoài mặc định của body */
+    padding: 20px; /* tạo khoảng cách viền trang */
+}
+
+
+/* ===== HEADER ĐẦU TRANG ===== */
+
+.site-header {
+    text-align: center; /* căn giữa nội dung */
+    padding: 30px 15px; /* khoảng cách trong */
+    background: linear-gradient(135deg, #007bff, #00b894); /* nền xanh chuyển màu */
+    color: white; /* chữ trắng */
+    border-radius: 14px; /* bo góc khối */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* đổ bóng */
+    margin-bottom: 15px; /* cách phần dưới */
+}
+
+.site-header h1 {
+    margin: 0; /* bỏ khoảng cách mặc định */
+    font-size: 30px; /* kích thước tiêu đề */
+    letter-spacing: 1px; /* giãn chữ nhẹ */
+}
+
+
+/* ===== THANH MENU ===== */
+
+.site-nav {
+    text-align: center; /* căn giữa menu */
+    margin-bottom: 25px; /* cách nội dung dưới */
+}
+
+.site-nav a {
+    text-decoration: none; /* bỏ gạch chân */
+    color: #007bff; /* màu chữ */
+    font-weight: bold; /* chữ đậm */
+    padding: 8px 16px; /* tạo vùng click */
+    margin: 0 6px; /* khoảng cách giữa link */
+    border-radius: 8px; /* bo góc */
+    background: white; /* nền trắng */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* bóng nhẹ */
+    transition: 0.3s; /* hiệu ứng mượt */
+}
+
+.site-nav a:hover {
+    background: #007bff; /* nền đổi màu khi hover */
+    color: white; /* chữ trắng khi hover */
+}
+
+
+/* ===== ĐOẠN GIỚI THIỆU ===== */
+
+.intro {
+    max-width: 900px; /* giới hạn chiều rộng */
+    margin: 0 auto 30px auto; /* căn giữa + cách dưới */
+    background: rgba(255,255,255,0.9); /* nền trắng mờ */
+    padding: 20px 25px; /* khoảng cách trong */
+    border-left: 6px solid #007bff; /* viền xanh bên trái */
+    border-radius: 10px; /* bo góc */
+    line-height: 1.7; /* giãn dòng */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08); /* bóng nhẹ */
+}
+
+
+/* ===== KHUNG CHỨA CÁC BÀI VIẾT ===== */
+
+.content {
+    max-width: 950px; /* chiều rộng tối đa */
+    margin: auto; /* căn giữa */
+}
+
+
+/* ===== THẺ BÀI VIẾT ===== */
+
+.content .card {
+    background: white; /* nền trắng */
+    border-radius: 14px; /* bo góc */
+    padding: 25px 28px; /* khoảng cách trong */
+    margin-bottom: 28px; /* cách card khác */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* bóng mềm */
+    border-top: 5px solid #00b894; /* thanh màu trên */
+}
+
+
+/* ===== TIÊU ĐỀ TRONG CARD ===== */
+
+.content .card h2 {
+    color: #0056b3; /* màu xanh đậm */
+    margin-top: 0; /* bỏ khoảng cách trên */
+    margin-bottom: 12px; /* cách nội dung dưới */
+    font-size: 22px; /* kích thước chữ */
+}
+
+
+/* ===== NỘI DUNG ĐOẠN VĂN ===== */
+
+.content .card p {
+    text-align: justify; /* canh đều hai bên */
+    line-height: 1.7; /* giãn dòng */
+    margin-bottom: 14px; /* cách đoạn dưới */
+    font-size: 16px; /* kích thước chữ */
+}
+
+
+/* ===== FOOTER CUỐI TRANG ===== */
+
+.site-footer {
+    text-align: center; /* căn giữa chữ */
+    background: #1f2d3d; /* nền tối */
+    color: white; /* chữ trắng */
+    padding: 16px; /* khoảng cách trong */
+    border-radius: 10px; /* bo góc */
+    margin-top: 40px; /* cách nội dung trên */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15); /* bóng */
+}
